@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: deployment
+metadata: 
+  name: go-web
+spec:
+  replicas: 2
+  selector:
+    matchlabel: go-web
+  template:
+    metadata: 
+      label:
+        app: go-web
+    spec:
+      containers:
+        - name: go-web
+          image: 229342747134.dkr.ecr.ap-southeast-2.amazonaws.com/go-web:latest
+          port:
+            - containerPort: 8080
+
+
+
