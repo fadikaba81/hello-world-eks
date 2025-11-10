@@ -2,7 +2,7 @@ name: Deploy to EKS
 
 on:
   push:
-    branch: ["main"]
+    branches: ["main"]
 
 env:
   AWS_REGION: ap-southeast-2
@@ -10,9 +10,9 @@ env:
 
 jobs:
   build-and-deploy:
-    run-on: ubuntu-latest
+    runs-on: ubuntu-latest
 
-    step:
+    steps:
     - name: checkout repo
       uses: actions/checkout@4
 
