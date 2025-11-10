@@ -11,8 +11,8 @@ The pipeline automatically:
 ---
 
 ## 🏗️ Project Architecture
-
-your-app/
+```
+app/
 ├── .github/
 │ └── workflows/
 │ └── deploy.yaml # GitHub Actions deployment pipeline
@@ -21,7 +21,7 @@ your-app/
 └── k8s/
 ├── deployment.yaml # Kubernetes Deployment
 └── service.yaml # Kubernetes Service (LoadBalancer)
-
+```
 ---
 
 ## 🌐 Application (Go Web Server)
