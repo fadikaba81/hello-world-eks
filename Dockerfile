@@ -1,5 +1,5 @@
 #Build Stage
-FROM golang:1.22 As Builder
+FROM golang:1.25 As Builder
 WORKDIR /app
 COPY . .
 RUN CGO_ENABLED=0 GOOS=linux go build -o server .
