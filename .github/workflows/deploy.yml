@@ -7,7 +7,6 @@ on:
 env:
   AWS_REGION: ap-southeast-2
   ECR_REPO: go-web
-  AWS_ACCOUNT_ID: 229342747134
 
 jobs:
   build-and-deploy:
@@ -39,7 +38,7 @@ jobs:
 
     - name: Update kubeconfig
       run: |
-        aws eks update-kubeconfig --name <EKS_CLUSTER_NAME> --region $AWS_REGION
+        aws eks update-kubeconfig --name hello-world --region $AWS_REGION
 
     - name: Deploy to EKS
       run: |
